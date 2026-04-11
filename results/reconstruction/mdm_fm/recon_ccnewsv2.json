@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "ccnewsv2",
+  "unlearn_steps": 2000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.5015515685081482,
+      "top5_accuracy": 0.6836048616498578
+    },
+    "stackexchange": {
+      "accuracy": 0.35893458127975464,
+      "top5_accuracy": 0.5146754590121542
+    },
+    "ccnewsv2": {
+      "accuracy": 0.3309412896633148,
+      "top5_accuracy": 0.48616498577708817
+    },
+    "gutenberg": {
+      "accuracy": 0.4184122085571289,
+      "top5_accuracy": 0.6024696146883889
+    },
+    "hackernews": {
+      "accuracy": 0.4141453206539154,
+      "top5_accuracy": 0.5647142487716577
+    },
+    "openwebtext": {
+      "accuracy": 0.3604861795902252,
+      "top5_accuracy": 0.5272821308507887
+    },
+    "pilecc": {
+      "accuracy": 0.33288079500198364,
+      "top5_accuracy": 0.49754331523144557
+    },
+    "wikipedia": {
+      "accuracy": 0.35802948474884033,
+      "top5_accuracy": 0.5035557279544867
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 6.464959733420983e-05,
+      "top5_accuracy": 0.00012929919834497026
+    },
+    "stackexchange": {
+      "accuracy": 0.012089475058019161,
+      "top5_accuracy": 0.051008533747090766
+    },
+    "ccnewsv2": {
+      "accuracy": 0.0046547711826860905,
+      "top5_accuracy": 0.02935091802430825
+    },
+    "gutenberg": {
+      "accuracy": 0.02010602504014969,
+      "top5_accuracy": 0.044155676234807345
+    },
+    "hackernews": {
+      "accuracy": 0.005430566146969795,
+      "top5_accuracy": 0.023273855702094646
+    },
+    "openwebtext": {
+      "accuracy": 0.00905094388872385,
+      "top5_accuracy": 0.036720972329971555
+    },
+    "pilecc": {
+      "accuracy": 0.0076933023519814014,
+      "top5_accuracy": 0.03213085078872511
+    },
+    "wikipedia": {
+      "accuracy": 0.017778640612959862,
+      "top5_accuracy": 0.06503749676752005
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.501486918910814,
+      "top5_accuracy": -0.6834755624515129
+    },
+    "stackexchange": {
+      "accuracy": -0.3468451062217355,
+      "top5_accuracy": -0.4636669252650634
+    },
+    "ccnewsv2": {
+      "accuracy": -0.32628651848062873,
+      "top5_accuracy": -0.45681406775277994
+    },
+    "gutenberg": {
+      "accuracy": -0.3983061835169792,
+      "top5_accuracy": -0.5583139384535816
+    },
+    "hackernews": {
+      "accuracy": -0.4087147545069456,
+      "top5_accuracy": -0.541440393069563
+    },
+    "openwebtext": {
+      "accuracy": -0.35143523570150137,
+      "top5_accuracy": -0.4905611585208171
+    },
+    "pilecc": {
+      "accuracy": -0.32518749265000224,
+      "top5_accuracy": -0.46541246444272044
+    },
+    "wikipedia": {
+      "accuracy": -0.34025084413588047,
+      "top5_accuracy": -0.43851823118696664
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>There's_a_surprisingtwisttoReginaWilloughby'slastseasonwithColumbiaCityBal_let_:_It_'s_also_her_1_8-year-olddaughter_Mel_ina'sfirstseasonwiththecompany.Regina_,_40,willretirefromthe_stage_inMarch,justasherdaughterstartsherowncareerasatrainee_._Butforthis",
+      "before": "<s>There'sasurprisingtwisttoReginaWilloughby'slastseasonwithColumbiaCityBal[ance]:[He]'s[and]her18-year-olddaughter[K]ina'sfirstseasonwiththecompany.Regina,40,willretirefromthe[game]inMarch,justasherdaughterstartsherowncareerasatrainee.Butforthis",
+      "after": "<s>There's[1]surprisingtwisttoReginaWilloughby'slastseasonwithColumbiaCityBal[1]:[1]'s[1]her18-year-olddaughter[1]ina'sfirstseasonwiththecompany.Regina[1]40,willretirefromthe[1]inMarch,justasherdaughterstartsherowncareerasatrainee[1]Butforthis",
+      "masked_positions": 9,
+      "correct_before": 4,
+      "correct_after": 1
+    },
+    {
+      "original": "thoughtfulandel_o_quent_dan_cer_about_hertimewiththecompanyandgoalsforthefuture._\n_WasNewYorkCity_Bal__let__always_yourdreamcompany?\nAssoonas_I_knew_I_wantedtobeaprofessionaldancer,I_knew__that__I_wantedto_be__in_NewYorkCityBallet_._Imoved_to_NewYorkwhenIwas14totrainattheSchool_of_American",
+      "before": "thoughtfulandeloquent[ex]cer[at]hertimewiththecompanyandgoalsforthefuture.\nWasNewYorkCity[,][I][is]yourdreamcompany?\nAssoonasIknewIwantedtobeaprofessionaldancer,I[was][']Iwantedtobe[the]NewYorkCityBallet.ImovedtoNewYorkwhenIwas14totrainattheSchoolofAmerican",
+      "after": "thoughtfulandel[1]quent[1]cer[1]hertimewiththecompanyandgoalsforthefuture.[1]WasNewYorkCity[1][1][1]yourdreamcompany?\nAssoonas[1]knew[1]wantedtobeaprofessionaldancer,I[1][1][1]wantedto[1][1]NewYorkCityBallet[1]Imoved[1]NewYorkwhenIwas14totrainattheSchool[1]American",
+      "masked_positions": 17,
+      "correct_before": 9,
+      "correct_after": 0
+    },
+    {
+      "original": ".It'sanin_valu_ablequalityforapersontohave,whethertheycontinuetodanceorendup_doing_otherthings.\nMyotherpieceofadviceis_that_youhavetotreateachdayasa_new_start._Some_days_you_mightnot_feel_goodaboutyourself_,_orthingsinyourbody_might_notbeworkingwell_\u2014_everydayisdifferent_._Butyouhavetostartfresh,be",
+      "before": ".It'sanin[vulner]ablequalityforapersontohave,whethertheycontinuetodanceorendup[to]otherthings.\nMyotherpieceofadviceisthatyouhavetotreateachdayasa[good]start.[The]daysyoumightnot[be]goodaboutyourself,orthingsinyourbody[will]notbeworkingwell[-]everydayisdifferent.Butyouhavetostartfresh,be",
+      "after": ".It'sanin[1]ablequalityforapersontohave,whethertheycontinuetodanceorendup[1]otherthings.\nMyotherpieceofadviceis[1]youhavetotreateachdayasa[1]start.[1]days[1]mightnot[1]goodaboutyourself[1]orthingsinyourbody[1]notbeworkingwell[1]everydayisdifferent[1]Butyouhavetostartfresh,be",
+      "masked_positions": 11,
+      "correct_before": 4,
+      "correct_after": 0
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[like]amin[ing]senthimpracticallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[out]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[1]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[1]look[1]amin[1]senthim[1]icallycatatonic.<s>[1]hadbeenmegan'splanwhenshegothim[1]earlier.<s>he'dseenthemovie[1]bymistake,consideringhewasalittleyoungforthepgcartoon,but[1]oldercous",
+      "masked_positions": 9,
+      "correct_before": 2,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[she]made[her]tothekitchen,meganpausedtocatchherbreath.<s>sheonlyhadasecondbefore[the][was]breezedinwithsean,andheryoung[,]brother,gavin.<s>feelinglike[a]was[and]againa[little][w]ager,shefiled[with]herparentsastheyheadedintothegarage.<s>``iwantto[go],",
+      "after": ".''<s>when[1]made[1]to[1]kitchen,meganpausedtocatchherbreath.<s>[1]onlyhadasecondbefore[1][1][1]reezedinwithsean,and[1]young[1]brother,gavin.<s>feelinglike[1][1][1]againa[1][1]ager,shefiled[1]herparents[1]theyheadedintothegarage.<s>``iwantto[1],",
+      "masked_positions": 17,
+      "correct_before": 6,
+      "correct_after": 0
+    }
+  ]
+}

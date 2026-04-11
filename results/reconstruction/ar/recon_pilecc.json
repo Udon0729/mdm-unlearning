@@ -1,0 +1,106 @@
+{
+  "unlearn_corpus": "pilecc",
+  "unlearn_steps": 10000,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.39370478983382207,
+      "top5_accuracy": 0.599227761485826
+    },
+    "stackexchange": {
+      "accuracy": 0.32072336265884654,
+      "top5_accuracy": 0.5014760508308895
+    },
+    "ccnewsv2": {
+      "accuracy": 0.28139784946236557,
+      "top5_accuracy": 0.4587487781036168
+    },
+    "gutenberg": {
+      "accuracy": 0.4253176930596285,
+      "top5_accuracy": 0.6112023460410557
+    },
+    "hackernews": {
+      "accuracy": 0.3306647116324536,
+      "top5_accuracy": 0.5130303030303031
+    },
+    "openwebtext": {
+      "accuracy": 0.2883186705767351,
+      "top5_accuracy": 0.47544477028348
+    },
+    "pilecc": {
+      "accuracy": 0.263822091886608,
+      "top5_accuracy": 0.4514956011730205
+    },
+    "wikipedia": {
+      "accuracy": 0.31623655913978493,
+      "top5_accuracy": 0.4917106549364614
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 0.34374389051808407,
+      "top5_accuracy": 0.5857869012707723
+    },
+    "stackexchange": {
+      "accuracy": 0.00030303030303030303,
+      "top5_accuracy": 0.0008504398826979472
+    },
+    "ccnewsv2": {
+      "accuracy": 0.0003616813294232649,
+      "top5_accuracy": 0.001378299120234604
+    },
+    "gutenberg": {
+      "accuracy": 0.00010752688172043011,
+      "top5_accuracy": 0.000498533724340176
+    },
+    "hackernews": {
+      "accuracy": 0.00021505376344086021,
+      "top5_accuracy": 0.0009481915933528837
+    },
+    "openwebtext": {
+      "accuracy": 0.0003812316715542522,
+      "top5_accuracy": 0.0012609970674486804
+    },
+    "pilecc": {
+      "accuracy": 0.0005865102639296188,
+      "top5_accuracy": 0.0018377321603128055
+    },
+    "wikipedia": {
+      "accuracy": 0.0003421309872922776,
+      "top5_accuracy": 0.001104594330400782
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.049960899315737994,
+      "top5_accuracy": -0.013440860215053752
+    },
+    "stackexchange": {
+      "accuracy": -0.32042033235581624,
+      "top5_accuracy": -0.5006256109481916
+    },
+    "ccnewsv2": {
+      "accuracy": -0.2810361681329423,
+      "top5_accuracy": -0.4573704789833822
+    },
+    "gutenberg": {
+      "accuracy": -0.4252101661779081,
+      "top5_accuracy": -0.6107038123167156
+    },
+    "hackernews": {
+      "accuracy": -0.3304496578690127,
+      "top5_accuracy": -0.5120821114369501
+    },
+    "openwebtext": {
+      "accuracy": -0.28793743890518086,
+      "top5_accuracy": -0.4741837732160313
+    },
+    "pilecc": {
+      "accuracy": -0.26323558162267835,
+      "top5_accuracy": -0.4496578690127077
+    },
+    "wikipedia": {
+      "accuracy": -0.31589442815249263,
+      "top5_accuracy": -0.4906060606060606
+    }
+  }
+}

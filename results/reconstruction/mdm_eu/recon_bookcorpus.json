@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "bookcorpus",
+  "unlearn_steps": 10000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.5015515685081482,
+      "top5_accuracy": 0.6836048616498578
+    },
+    "stackexchange": {
+      "accuracy": 0.35893458127975464,
+      "top5_accuracy": 0.5146754590121542
+    },
+    "ccnewsv2": {
+      "accuracy": 0.3309412896633148,
+      "top5_accuracy": 0.48616498577708817
+    },
+    "gutenberg": {
+      "accuracy": 0.4184122085571289,
+      "top5_accuracy": 0.6024696146883889
+    },
+    "hackernews": {
+      "accuracy": 0.4141453206539154,
+      "top5_accuracy": 0.5647142487716577
+    },
+    "openwebtext": {
+      "accuracy": 0.3604861795902252,
+      "top5_accuracy": 0.5272821308507887
+    },
+    "pilecc": {
+      "accuracy": 0.33288079500198364,
+      "top5_accuracy": 0.49754331523144557
+    },
+    "wikipedia": {
+      "accuracy": 0.35802948474884033,
+      "top5_accuracy": 0.5035557279544867
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.04402637703646237
+    },
+    "stackexchange": {
+      "accuracy": 0.32033875584602356,
+      "top5_accuracy": 0.4987716576157228
+    },
+    "ccnewsv2": {
+      "accuracy": 0.20655547082424164,
+      "top5_accuracy": 0.35583139384535817
+    },
+    "gutenberg": {
+      "accuracy": 0.16847684979438782,
+      "top5_accuracy": 0.3708301008533747
+    },
+    "hackernews": {
+      "accuracy": 0.24366433918476105,
+      "top5_accuracy": 0.4017326092578226
+    },
+    "openwebtext": {
+      "accuracy": 0.181923970580101,
+      "top5_accuracy": 0.34141453322989396
+    },
+    "pilecc": {
+      "accuracy": 0.18625549972057343,
+      "top5_accuracy": 0.34277217481251615
+    },
+    "wikipedia": {
+      "accuracy": 0.18580295145511627,
+      "top5_accuracy": 0.3272562710111197
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.5015515685081482,
+      "top5_accuracy": -0.6395784846133954
+    },
+    "stackexchange": {
+      "accuracy": -0.03859582543373108,
+      "top5_accuracy": -0.015903801396431383
+    },
+    "ccnewsv2": {
+      "accuracy": -0.12438581883907318,
+      "top5_accuracy": -0.13033359193173
+    },
+    "gutenberg": {
+      "accuracy": -0.2499353587627411,
+      "top5_accuracy": -0.2316395138350142
+    },
+    "hackernews": {
+      "accuracy": -0.17048098146915436,
+      "top5_accuracy": -0.16298163951383504
+    },
+    "openwebtext": {
+      "accuracy": -0.1785622090101242,
+      "top5_accuracy": -0.18586759762089472
+    },
+    "pilecc": {
+      "accuracy": -0.14662529528141022,
+      "top5_accuracy": -0.15477114041892942
+    },
+    "wikipedia": {
+      "accuracy": -0.17222653329372406,
+      "top5_accuracy": -0.17629945694336696
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[like]amin[ing]senthimpracticallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[out]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[\n]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[\n]look[\n]amin[\n]senthim[\n]icallycatatonic.<s>[\n]hadbeenmegan'splanwhenshegothim[\n]earlier.<s>he'dseenthemovie[\n]bymistake,consideringhewasalittleyoungforthepgcartoon,but[\n]oldercous",
+      "masked_positions": 9,
+      "correct_before": 2,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[she]made[her]tothekitchen,meganpausedtocatchherbreath.<s>sheonlyhadasecondbefore[the][was]breezedinwithsean,andheryoung[,]brother,gavin.<s>feelinglike[a]was[and]againa[little][w]ager,shefiled[with]herparentsastheyheadedintothegarage.<s>``iwantto[go],",
+      "after": ".''<s>when[\n]made[\n]to[\n]kitchen,meganpausedtocatchherbreath.<s>[\n]onlyhadasecondbefore[\n][\n][\n]reezedinwithsean,and[\n]young[\n]brother,gavin.<s>feelinglike[\n][\n][\n]againa[\n][\n]ager,shefiled[\n]herparents[\n]theyheadedintothegarage.<s>``iwantto[\n],",
+      "masked_positions": 17,
+      "correct_before": 6,
+      "correct_after": 0
+    },
+    {
+      "original": "churchalcove,sheby_pass_edeveryonebyturningrightandheadingdownthehallway.<s>atthelast_door_ontheright,sheknocked.<s>``_it_'sme,megan.''_<s>_emma_'_s_best_friend,_case_y,answered_the_door.<s>``well_,_ifitisn_'_tthefairy_god_mother,''shemusedwith",
+      "before": "churchalcove,sheby[head]edeveryonebyturningrightandheadingdownthehallway.<s>atthelast[time]ontheright,sheknocked.<s>``[that]'sme,megan.''<s>emma's[little]friend,[he]y,answeredthedoor.<s>``well,ifitisn'tthefairy[-]mother,''shemusedwith",
+      "after": "churchalcove,sheby[\n]edeveryonebyturningrightandheadingdownthehallway.<s>atthelast[\n]ontheright,sheknocked.<s>``[\n]'sme,megan.''[\n]emma[\n]s[\n]friend,[\n]y,answered[\n]door.<s>``well[\n]ifitisn[\n]tthefairy[\n]mother,''shemusedwith",
+      "masked_positions": 11,
+      "correct_before": 5,
+      "correct_after": 0
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>Q:\n_\n_WhywasMundungusbannedfromtheHog'sHead?\n\n_In_Order_of_thePhoenix_while_thetri_o_wereintheHogsHead_for_thefirsttimeplottingthestartofDumbledore_'_sArmy,ittranspiresthatol_'_Dungwaslurkinginthepubinadisguise,having_been_banned",
+      "before": "<s>Q:\n\nWhywasMundungusbannedfromtheHog'sHead?\n\n[The]OrderofthePhoenix[and]thetri[als]wereintheHogsHeadforthefirsttimeplottingthestartofDumbledore'sArmy,ittranspiresthatol'Dungwaslurkinginthepubinadisguise,havingbeenbanned",
+      "after": "<s>Q:\n\nWhywasMundungusbannedfromtheHog'sHead?\n\n[I]Order[ing]thePhoenix[of]thetri[es]wereintheHogsHead[of]thefirsttimeplottingthestartofDumbledore'sArmy,ittranspiresthatol[.]Dungwaslurkinginthepubinadisguise,having[a]banned",
+      "masked_positions": 9,
+      "correct_before": 6,
+      "correct_after": 2
+    },
+    {
+      "original": "allmyshellscript_ing_in_python_._\n_It'seasiertoread,morepowerfulandworks_on_windowsaswell.\n_\n__A__:_\n\nYoucouldjusttakethebase_name_as_an_argumentanduse$1.Rnw_,__$__1_.tex_,__and_$1.pdf._Python_isgreat_for_shellscripts,butIusuallystickwithbashforthingslessthan__1",
+      "before": "allmyshellscript[s]in[it].\nIt'seasiertoread,morepowerfulandworks[in]windowsaswell.\n\nA:\n\nYoucouldjusttakethebase[such]asanargumentanduse$1.Rnw[.][]1.tex[.][for]$1.pdf.[This]isgreatforshellscripts,butIusuallystickwithbashforthingslessthan1",
+      "after": "allmyshellscript[is]in[question].\nIt'seasiertoread,morepowerfulandworks[in]windowsaswell.\n\nA:\n\nYoucouldjusttakethebase[value]as[the]argumentanduse$1.Rnw[.][.]1.tex[-][-]$1.pdf.[It]isgreat[to]shellscripts,butIusuallystickwithbashforthingslessthan1",
+      "masked_positions": 17,
+      "correct_before": 8,
+      "correct_after": 6
+    }
+  ]
+}

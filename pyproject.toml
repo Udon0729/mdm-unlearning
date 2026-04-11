@@ -1,0 +1,114 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mdm-unlearning"
+version = "0.1.0"
+description = "Empirical study of training data attribution and selective unlearning in masked diffusion language models"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Kazuki Munaoka", email = "munaoka.kazuki.22@shizuoka.ac.jp" },
+]
+keywords = [
+    "masked diffusion language model",
+    "unlearning",
+    "training data attribution",
+    "untrac",
+    "knowledge localization",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch>=2.5",
+    "lightning>=2.6",
+    "transformers>=4.50",
+    "datasets>=3.0",
+    "tokenizers>=0.20",
+    "sentencepiece",
+    "numpy>=1.25,<2",
+    "scipy",
+    "scikit-learn",
+    "tqdm",
+    "wandb",
+]
+
+[project.optional-dependencies]
+flash = [
+    # Install separately matching your CUDA version:
+    # uv pip install flash-attn --no-build-isolation
+]
+viz = [
+    "matplotlib",
+    "seaborn",
+]
+dev = [
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "pytest>=8",
+    "pre-commit>=3.7",
+]
+
+[project.urls]
+Homepage = "https://github.com/Udon0729/mdm-unlearning"
+Repository = "https://github.com/Udon0729/mdm-unlearning"
+Issues = "https://github.com/Udon0729/mdm-unlearning/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mdm_unlearning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "SIM", # flake8-simplify
+    "RUF", # ruff-specific rules
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+    "B008",  # function calls in argument defaults
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = false
+warn_unused_configs = true
+ignore_missing_imports = true
+disallow_untyped_defs = false
+check_untyped_defs = true
+exclude = [
+    "build",
+    "dist",
+    ".venv",
+    "workdir",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
