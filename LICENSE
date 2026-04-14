@@ -1,0 +1,35 @@
+MIT License
+
+Copyright (c) 2026 Kazuki Munaoka
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This project incorporates code from the SMDM project (Scaling up Masked
+Diffusion Models on Text) by Nie et al., distributed under the MIT License.
+The base model architectures (in src/mdm_unlearning/models/) and data loading
+utilities (in src/mdm_unlearning/data/) are derived from SMDM.
+
+SMDM repository: https://github.com/ML-GSAI/SMDM
+SMDM paper: arXiv:2410.18514
+
+The encoder-decoder masked diffusion architecture (enc_dec_diffmodel.py)
+is inspired by E2D2 (Arriola et al., NeurIPS 2025).
+E2D2 repository: https://github.com/kuleshov-group/e2d2

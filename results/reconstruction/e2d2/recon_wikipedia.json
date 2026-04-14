@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "wikipedia",
+  "unlearn_steps": 10000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.9118179678916931,
+      "top5_accuracy": 0.9339927592448927
+    },
+    "stackexchange": {
+      "accuracy": 0.8992758989334106,
+      "top5_accuracy": 0.9202223946211533
+    },
+    "ccnewsv2": {
+      "accuracy": 0.8987587094306946,
+      "top5_accuracy": 0.9172485130592191
+    },
+    "gutenberg": {
+      "accuracy": 0.9071632027626038,
+      "top5_accuracy": 0.9264934057408845
+    },
+    "hackernews": {
+      "accuracy": 0.9072924852371216,
+      "top5_accuracy": 0.9251357641582623
+    },
+    "openwebtext": {
+      "accuracy": 0.9015386700630188,
+      "top5_accuracy": 0.9206749418153607
+    },
+    "pilecc": {
+      "accuracy": 0.899017333984375,
+      "top5_accuracy": 0.9156969226790794
+    },
+    "wikipedia": {
+      "accuracy": 0.9006335735321045,
+      "top5_accuracy": 0.9169252650633566
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "stackexchange": {
+      "accuracy": 0.0,
+      "top5_accuracy": 6.464959917248513e-05
+    },
+    "ccnewsv2": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "gutenberg": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "hackernews": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "openwebtext": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "pilecc": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "wikipedia": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.9118179678916931,
+      "top5_accuracy": -0.9339927592448927
+    },
+    "stackexchange": {
+      "accuracy": -0.8992758989334106,
+      "top5_accuracy": -0.9201577450219808
+    },
+    "ccnewsv2": {
+      "accuracy": -0.8987587094306946,
+      "top5_accuracy": -0.9172485130592191
+    },
+    "gutenberg": {
+      "accuracy": -0.9071632027626038,
+      "top5_accuracy": -0.9264934057408845
+    },
+    "hackernews": {
+      "accuracy": -0.9072924852371216,
+      "top5_accuracy": -0.9251357641582623
+    },
+    "openwebtext": {
+      "accuracy": -0.9015386700630188,
+      "top5_accuracy": -0.9206749418153607
+    },
+    "pilecc": {
+      "accuracy": -0.899017333984375,
+      "top5_accuracy": -0.9156969226790794
+    },
+    "wikipedia": {
+      "accuracy": -0.9006335735321045,
+      "top5_accuracy": -0.9169252650633566
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>MunichSecurity_Conference_\n\nTheMunichSecurityConference(MSC;)isanannualconferenceon_international_security_policy_thathas_taken_placein_Mun_ich,Bavariasince_1_963.FormernamesareWehrkund_et_agungandM\u00fcnchnerKonferenz_f\u00fcr_Sicherheitspolitik.Itistheworld'slargestgather_ing_ofitskind",
+      "before": "<s>MunichSecurity[.]\n\nTheMunichSecurityConference(MSC;)isanannualconferenceon[the]security[,]thathas[a]placein[the]ich,Bavariasince1963.FormernamesareWehrkund[.]agungandM\u00fcnchnerKonferenz[in]Sicherheitspolitik.Itistheworld'slargestgather[out]ofitskind",
+      "after": "<s>MunichSecurity[\u592a]\n\nTheMunichSecurityConference(MSC;)isanannualconferenceon[\u592a]security[\u592a]thathas[\u592a]placein[\u592a]ich,Bavariasince[\u592a]963.FormernamesareWehrkund[\u592a]agungandM\u00fcnchnerKonferenz[\u592a]Sicherheitspolitik.Itistheworld'slargestgather[\u592a]ofitskind",
+      "masked_positions": 9,
+      "correct_before": 1,
+      "correct_after": 0
+    },
+    {
+      "original": "workofEwald_von_Kle_ist_,_who_foundedtheMunichSecurityConference.Theawardwillbe_given_toprominentindividualswhohave_made__an__out_standingcontributiontopeaceandconflictresolution._The_w_inners_oftheEwaldvonKleistAwardwere_in____2_00_9__Dr_HenryKissingerand_in_2_0_10JavierSolanadeMadariaga.Alsoin__2",
+      "before": "workofEwald[,]Kle[s],[and]foundedtheMunichSecurityConference.Theawardwillbe[able]toprominentindividualswhohave[been][to][the]standingcontributiontopeaceandconflictresolution.Thew[s]oftheEwaldvonKleistAwardwerein200[0][,]HenryKissingerand[the]2010JavierSolanadeMadariaga.Alsoin2",
+      "after": "workofEwald[\u592a]Kle[\u592a],[\u592a]foundedtheMunichSecurityConference.Theawardwillbe[\u592a]toprominentindividualswhohave[\u592a][\u592a][\u592a]standingcontributiontopeaceandconflictresolution.[\u592a]w[\u592a]oftheEwaldvonKleistAwardwere[\u592a][\u592a][\u592a]00[\u592a][\u592a]HenryKissingerand[\u592a]2[\u592a]10JavierSolanadeMadariaga.Alsoin[\u592a]2",
+      "masked_positions": 17,
+      "correct_before": 6,
+      "correct_after": 0
+    },
+    {
+      "original": "\nDuringapanel_discussion_onthefutureofdefensealliances,theJapaneseForeignMinisterTar\u014dK_\u014d_nocalledforgreaterinternationalcooperationfortheprotection_of_theinternationalorder:\"IftheU_._S._can_no_longer_actalone_as_apoliceman_,_Japan,Europeandother_like_-mindedcountries_will_havetoincreasebur_den_-sharing\"Otherparticipantsinthe",
+      "before": "\nDuringapanel[,]onthefutureofdefensealliances,theJapaneseForeignMinisterTar\u014dK[.]nocalledforgreaterinternationalcooperationfortheprotectionoftheinternationalorder:\"IftheU.S.[It]no[more]actalone[,]apoliceman[of]Japan,Europeandother[non]-mindedcountries[we]havetoincreasebur[ing]-sharing\"Otherparticipantsinthe",
+      "after": "\nDuringapanel[\u592a]onthefutureofdefensealliances,theJapaneseForeignMinisterTar\u014dK[\u592a]nocalledforgreaterinternationalcooperationfortheprotection[\u592a]theinternationalorder:\"IftheU[\u592a]S.[\u592a]no[\u592a]actalone[\u592a]apoliceman[\u592a]Japan,Europeandother[\u592a]-mindedcountries[\u592a]havetoincreasebur[\u592a]-sharing\"Otherparticipantsinthe",
+      "masked_positions": 11,
+      "correct_before": 2,
+      "correct_after": 0
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[in]amin[ing]senthim[sh]icallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[to]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[\u592a]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[\u592a]look[\u592a]amin[\u592a]senthim[\u592a]icallycatatonic.<s>[\u592a]hadbeenmegan'splanwhenshegothim[\u592a]earlier.<s>he'dseenthemovie[\u592a]bymistake,consideringhewasalittleyoungforthepgcartoon,but[\u592a]oldercous",
+      "masked_positions": 9,
+      "correct_before": 1,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[he]made[him]tothekitchen,meganpausedtocatchherbreath.<s>[the]onlyhadasecondbefore[,][,][-]reezedinwithsean,and[a]young[her]brother,gavin.<s>feelinglike[a][,][ed]againa[few][of]ager,shefiled[in]herparents[,]theyheadedintothegarage.<s>``iwantto[be],",
+      "after": ".''<s>when[\u592a]made[\u592a]to[\u592a]kitchen,meganpausedtocatchherbreath.<s>[\u592a]onlyhadasecondbefore[\u592a][\u592a][\u592a]reezedinwithsean,and[\u592a]young[\u592a]brother,gavin.<s>feelinglike[\u592a][\u592a][\u592a]againa[\u592a][\u592a]ager,shefiled[\u592a]herparents[\u592a]theyheadedintothegarage.<s>``iwantto[\u592a],",
+      "masked_positions": 17,
+      "correct_before": 1,
+      "correct_after": 0
+    }
+  ]
+}

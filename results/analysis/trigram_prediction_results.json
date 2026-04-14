@@ -1,0 +1,234 @@
+{
+  "bookcorpus": {
+    "total": 200,
+    "top1_correct": 104,
+    "top5_correct": 151,
+    "top1_pct": 52.0,
+    "top5_pct": 75.5,
+    "examples": [
+      [
+        "i do n",
+        393
+      ],
+      [
+        "she did n",
+        249
+      ],
+      [
+        "<s> she was",
+        238
+      ],
+      [
+        "'' he said",
+        227
+      ],
+      [
+        "rachel",
+        219
+      ]
+    ]
+  },
+  "stackexchange": {
+    "total": 200,
+    "top1_correct": 41,
+    "top5_correct": 50,
+    "top1_pct": 20.5,
+    "top5_pct": 25.0,
+    "examples": [
+      [
+        "&& board[",
+        80
+      ],
+      [
+        "   if (",
+        73
+      ],
+      [
+        "div class=\"",
+        72
+      ],
+      [
+        ",red,",
+        72
+      ],
+      [
+        "option value=\"",
+        69
+      ]
+    ]
+  },
+  "ccnewsv2": {
+    "total": 200,
+    "top1_correct": 37,
+    "top5_correct": 37,
+    "top1_pct": 18.5,
+    "top5_pct": 18.5,
+    "examples": [
+      [
+        "businesswire",
+        108
+      ],
+      [
+        "inesswire.",
+        108
+      ],
+      [
+        "\nSEE:",
+        101
+      ],
+      [
+        "= prash",
+        100
+      ],
+      [
+        "TechRep",
+        79
+      ]
+    ]
+  },
+  "gutenberg": {
+    "total": 200,
+    "top1_correct": 188,
+    "top5_correct": 192,
+    "top1_pct": 94.0,
+    "top5_pct": 96.0,
+    "examples": [
+      [
+        "thou shalt",
+        593
+      ],
+      [
+        "LORD,",
+        536
+      ],
+      [
+        "children of Israel",
+        420
+      ],
+      [
+        "And the L",
+        347
+      ],
+      [
+        "came to pass",
+        296
+      ]
+    ]
+  },
+  "hackernews": {
+    "total": 200,
+    "top1_correct": 112,
+    "top5_correct": 157,
+    "top1_pct": 56.0,
+    "top5_pct": 78.5,
+    "examples": [
+      [
+        "](https://",
+        493
+      ],
+      [
+        "](http://",
+        263
+      ],
+      [
+        "[http://",
+        174
+      ],
+      [
+        "ycombin",
+        100
+      ],
+      [
+        "combinator",
+        99
+      ]
+    ]
+  },
+  "openwebtext": {
+    "total": 200,
+    "top1_correct": 10,
+    "top5_correct": 27,
+    "top1_pct": 5.0,
+    "top5_pct": 13.5,
+    "examples": [
+      [
+        "the minimum w",
+        61
+      ],
+      [
+        "charges related to",
+        61
+      ],
+      [
+        "integrative complexity",
+        45
+      ],
+      [
+        "dogmatism",
+        43
+      ],
+      [
+        "(page ",
+        41
+      ]
+    ]
+  },
+  "pilecc": {
+    "total": 200,
+    "top1_correct": 0,
+    "top5_correct": 0,
+    "top1_pct": 0.0,
+    "top5_pct": 0.0,
+    "examples": [
+      [
+        "Read our full",
+        81
+      ],
+      [
+        "our full review",
+        81
+      ],
+      [
+        "... Read our",
+        76
+      ],
+      [
+        "\nReturn to",
+        60
+      ],
+      [
+        "Return to text",
+        59
+      ]
+    ]
+  },
+  "wikipedia": {
+    "total": 200,
+    "top1_correct": 139,
+    "top5_correct": 159,
+    "top1_pct": 69.5,
+    "top5_pct": 79.5,
+    "examples": [
+      [
+        "\nCategory:",
+        2692
+      ],
+      [
+        "\nExternal links",
+        248
+      ],
+      [
+        "External links\n",
+        187
+      ],
+      [
+        "merston North",
+        120
+      ],
+      [
+        ", Su\u00e1",
+        101
+      ]
+    ]
+  }
+}

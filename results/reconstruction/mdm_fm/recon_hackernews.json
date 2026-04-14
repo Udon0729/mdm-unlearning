@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "hackernews",
+  "unlearn_steps": 2000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.5015515685081482,
+      "top5_accuracy": 0.6836048616498578
+    },
+    "stackexchange": {
+      "accuracy": 0.35893458127975464,
+      "top5_accuracy": 0.5146754590121542
+    },
+    "ccnewsv2": {
+      "accuracy": 0.3309412896633148,
+      "top5_accuracy": 0.48616498577708817
+    },
+    "gutenberg": {
+      "accuracy": 0.4184122085571289,
+      "top5_accuracy": 0.6024696146883889
+    },
+    "hackernews": {
+      "accuracy": 0.4141453206539154,
+      "top5_accuracy": 0.5647142487716577
+    },
+    "openwebtext": {
+      "accuracy": 0.3604861795902252,
+      "top5_accuracy": 0.5272821308507887
+    },
+    "pilecc": {
+      "accuracy": 0.33288079500198364,
+      "top5_accuracy": 0.49754331523144557
+    },
+    "wikipedia": {
+      "accuracy": 0.35802948474884033,
+      "top5_accuracy": 0.5035557279544867
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.05120248254460822
+    },
+    "stackexchange": {
+      "accuracy": 0.07454098761081696,
+      "top5_accuracy": 0.07492888544091027
+    },
+    "ccnewsv2": {
+      "accuracy": 0.021011119708418846,
+      "top5_accuracy": 0.021528316524437548
+    },
+    "gutenberg": {
+      "accuracy": 0.07531677931547165,
+      "top5_accuracy": 0.07538143263511767
+    },
+    "hackernews": {
+      "accuracy": 0.09044478833675385,
+      "top5_accuracy": 0.09096198603568657
+    },
+    "openwebtext": {
+      "accuracy": 0.029738815501332283,
+      "top5_accuracy": 0.030191362813550556
+    },
+    "pilecc": {
+      "accuracy": 0.04021205008029938,
+      "top5_accuracy": 0.040987845875355575
+    },
+    "wikipedia": {
+      "accuracy": 0.04312128201127052,
+      "top5_accuracy": 0.04344453064391001
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.5015515685081482,
+      "top5_accuracy": -0.6324023791052495
+    },
+    "stackexchange": {
+      "accuracy": -0.2843935936689377,
+      "top5_accuracy": -0.4397465735712439
+    },
+    "ccnewsv2": {
+      "accuracy": -0.309930169954896,
+      "top5_accuracy": -0.4646366692526506
+    },
+    "gutenberg": {
+      "accuracy": -0.34309542924165726,
+      "top5_accuracy": -0.5270881820532712
+    },
+    "hackernews": {
+      "accuracy": -0.32370053231716156,
+      "top5_accuracy": -0.4737522627359711
+    },
+    "openwebtext": {
+      "accuracy": -0.33074736408889294,
+      "top5_accuracy": -0.4970907680372381
+    },
+    "pilecc": {
+      "accuracy": -0.29266874492168427,
+      "top5_accuracy": -0.45655546935609
+    },
+    "wikipedia": {
+      "accuracy": -0.3149082027375698,
+      "top5_accuracy": -0.46011119731057665
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>\nFace_book_hashiredthePatriotAct'sco-authorasageneralcounsel_-_Jerry_2_\nhttps_://_boing_bo_ing.net/20_1_9/04/22/mass-sur_ve_illance-r-us.html\n_====_==\njavagram\n\u201cJenniferNewsteadhelpedcraftthePatri_ot_Act,a",
+      "before": "<s>\nFacebookhashiredthePatriotAct'sco-authorasageneralcounsel[or]Jerry[ia]\nhttps://boing[.]ing.net/2019/04/22/mass-sur[b]illance-r-us.html\n======\njavagram\n\u201cJenniferNewsteadhelpedcraftthePatri[ots]Act,a",
+      "after": "<s>\nFace[\n]hashiredthePatriotAct'sco-authorasageneralcounsel[\n]Jerry[\n]\nhttps[\n]boing[\n]ing.net/20[\n]9/04/22/mass-sur[\n]illance-r-us.html\n[\n]==\njavagram\n\u201cJenniferNewsteadhelpedcraftthePatri[\n]Act,a",
+      "masked_positions": 9,
+      "correct_before": 4,
+      "correct_after": 0
+    },
+    {
+      "original": "ifIaskedthem_for_the_offer_in_writing_now,theywouldcertainlyknowwhat'shappening(_g_iventhatI've_kept__them__waiting_forsometimenow).Itoldthis_to_B_already_previously,theyunderstood,butitwouldcertainly_benefit__me__if_Ihad_it__in_writingnow.<p>_How_shouldthis_game_beplayedinyouropinion?IactuallypreferA,andif_B_'",
+      "before": "ifIaskedthem[to]the[time]in[the]now,theywouldcertainlyknowwhat'shappening(giventhatI've[been][to][it]forsometimenow).Itoldthis[,]B[,]previously,theyunderstood,butitwouldcertainly[be][,]ifIhad[to][been]writingnow.<p>Howshouldthis[not]beplayedinyouropinion?IactuallypreferA,andif[I]'",
+      "after": "ifIaskedthem[\n]the[\n]in[\n]now,theywouldcertainlyknowwhat'shappening([\n]iventhatI've[\n][\n][\n]forsometimenow).Itoldthis[\n]B[\n]previously,theyunderstood,butitwouldcertainly[\n][\n][\n]Ihad[\n][\n]writingnow.<p>[\n]shouldthis[\n]beplayedinyouropinion?IactuallypreferA,andif[\n]'",
+      "masked_positions": 17,
+      "correct_before": 3,
+      "correct_after": 0
+    },
+    {
+      "original": "\naverage,butI_was_nothappy.ThatwasnotwhatIwanted.Iquit.\n\n------_\n_lsiebert\naskforofferinwriting,_explain_why,andthatyou'dprefer_A_,see_if_they_\n_areopen_to_matchingB'_s_offer.Ifso,_you_mightwanttotake_their_initial\noffer_to_B.\n\nGetB's",
+      "before": "\naverage,butIwasnothappy.ThatwasnotwhatIwanted.Iquit.\n\n------\nlsiebert\naskforofferinwriting,[and]why,andthatyou'dprefer[to],seeifthey\nareopentomatchingB'soffer.Ifso,youmightwanttotake[the]initial\noffer[,]B.\n\nGetB's",
+      "after": "\naverage,butI[\n]nothappy.ThatwasnotwhatIwanted.Iquit.\n\n------\nlsiebert\naskforofferinwriting,[\n]why,andthatyou'dprefer[\n],see[\n]they\nareopen[\n]matchingB'[\n]offer.Ifso,[\n]mightwanttotake[\n]initial\noffer[\n]B.\n\nGetB's",
+      "masked_positions": 11,
+      "correct_before": 7,
+      "correct_after": 2
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[like]amin[ing]senthimpracticallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[out]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[\n]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[\n]look[\n]amin[\n]senthim[\n]icallycatatonic.<s>[\n]hadbeenmegan'splanwhenshegothim[\n]earlier.<s>he'dseenthemovie[\n]bymistake,consideringhewasalittleyoungforthepgcartoon,but[\n]oldercous",
+      "masked_positions": 9,
+      "correct_before": 2,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[she]made[her]tothekitchen,meganpausedtocatchherbreath.<s>sheonlyhadasecondbefore[the][was]breezedinwithsean,andheryoung[,]brother,gavin.<s>feelinglike[a]was[and]againa[little][w]ager,shefiled[with]herparentsastheyheadedintothegarage.<s>``iwantto[go],",
+      "after": ".''<s>when[\n]made[\n]to[\n]kitchen,meganpausedtocatchherbreath.<s>[\n]onlyhadasecondbefore[\n][\n][\n]reezedinwithsean,and[\n]young[\n]brother,gavin.<s>feelinglike[\n][\n][\n]againa[\n][\n]ager,shefiled[\n]herparents[\n]theyheadedintothegarage.<s>``iwantto[\n],",
+      "masked_positions": 17,
+      "correct_before": 6,
+      "correct_after": 0
+    }
+  ]
+}

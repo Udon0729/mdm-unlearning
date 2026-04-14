@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "mdm-unlearning: Empirical study of training data attribution and selective unlearning in masked diffusion language models"
+abstract: >-
+  This repository contains experimental code, results, and analysis from a
+  study comparing training data attribution (UnTrac) and selective unlearning
+  across masked diffusion language models (MDM), encoder-decoder MDM (E2D2),
+  and autoregressive language models (ARM). The key finding is that NLL-based
+  attribution scores correlate with leave-one-out ground truth across all
+  architectures, but actual selective forgetting (measured via reconstruction
+  analysis) succeeds only at the fact level (~100 trigrams) and fails at the
+  corpus level (~40,000 sequences) regardless of architecture or method.
+authors:
+  - family-names: "Munaoka"
+    given-names: "Kota"
+    affiliation: "Shizuoka University"
+version: "0.1.0"
+date-released: "2026-04-11"
+license: MIT
+repository-code: "https://github.com/Udon0729/mdm-unlearning"
+keywords:
+  - "masked diffusion language model"
+  - "training data attribution"
+  - "machine unlearning"
+  - "knowledge localization"
+  - "untrac"
+references:
+  - type: article
+    title: "Unlearning Traces the Influential Training Data of Language Models"
+    authors:
+      - family-names: "Isonuma"
+        given-names: "Masaru"
+      - family-names: "Titov"
+        given-names: "Ivan"
+    year: 2024
+    journal: "Proceedings of ACL 2024"
+  - type: article
+    title: "Scaling up Masked Diffusion Models on Text"
+    authors:
+      - family-names: "Nie"
+        given-names: "Shen"
+    year: 2024
+    identifiers:
+      - type: other
+        value: "arXiv:2410.18514"
+  - type: article
+    title: "Encoder-Decoder Diffusion Language Models for Efficient Training and Inference"
+    authors:
+      - family-names: "Arriola"
+        given-names: "Marianne"
+    year: 2025
+    journal: "NeurIPS 2025"
+    identifiers:
+      - type: other
+        value: "arXiv:2510.22852"

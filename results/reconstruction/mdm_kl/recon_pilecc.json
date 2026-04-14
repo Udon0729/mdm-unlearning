@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "pilecc",
+  "unlearn_steps": 10000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.5015515685081482,
+      "top5_accuracy": 0.6836048616498578
+    },
+    "stackexchange": {
+      "accuracy": 0.35893458127975464,
+      "top5_accuracy": 0.5146754590121542
+    },
+    "ccnewsv2": {
+      "accuracy": 0.3309412896633148,
+      "top5_accuracy": 0.48616498577708817
+    },
+    "gutenberg": {
+      "accuracy": 0.4184122085571289,
+      "top5_accuracy": 0.6024696146883889
+    },
+    "hackernews": {
+      "accuracy": 0.4141453206539154,
+      "top5_accuracy": 0.5647142487716577
+    },
+    "openwebtext": {
+      "accuracy": 0.3604861795902252,
+      "top5_accuracy": 0.5272821308507887
+    },
+    "pilecc": {
+      "accuracy": 0.33288079500198364,
+      "top5_accuracy": 0.49754331523144557
+    },
+    "wikipedia": {
+      "accuracy": 0.35802948474884033,
+      "top5_accuracy": 0.5035557279544867
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "stackexchange": {
+      "accuracy": 0.001745539135299623,
+      "top5_accuracy": 0.004719420739591414
+    },
+    "ccnewsv2": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0001939487975174554
+    },
+    "gutenberg": {
+      "accuracy": 0.0009050943772308528,
+      "top5_accuracy": 0.0009050943884147918
+    },
+    "hackernews": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0002585983966899405
+    },
+    "openwebtext": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "pilecc": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "wikipedia": {
+      "accuracy": 6.464959733420983e-05,
+      "top5_accuracy": 6.464959917248513e-05
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.5015515685081482,
+      "top5_accuracy": -0.6836048616498578
+    },
+    "stackexchange": {
+      "accuracy": -0.357189042144455,
+      "top5_accuracy": -0.5099560382725628
+    },
+    "ccnewsv2": {
+      "accuracy": -0.3309412896633148,
+      "top5_accuracy": -0.4859710369795707
+    },
+    "gutenberg": {
+      "accuracy": -0.41750711417989805,
+      "top5_accuracy": -0.6015645202999741
+    },
+    "hackernews": {
+      "accuracy": -0.4141453206539154,
+      "top5_accuracy": -0.5644556503749677
+    },
+    "openwebtext": {
+      "accuracy": -0.3604861795902252,
+      "top5_accuracy": -0.5272821308507887
+    },
+    "pilecc": {
+      "accuracy": -0.33288079500198364,
+      "top5_accuracy": -0.49754331523144557
+    },
+    "wikipedia": {
+      "accuracy": -0.3579648351515061,
+      "top5_accuracy": -0.5034910783553141
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>Itisdone_,_andsubmitted.Youcanplay\u201cSurvivaloftheTastiest\u201don_Android_,_and_onthe_web_.Play_ing_onthewebworks,but_you_havetosimulatemulti-touchfortablemovingandthat_can_beabitconfusing.\n\nThere\u2019_s_alotI\u2019dliketotalkabout.I\u2019llgothroughevery_topic_,insted",
+      "before": "<s>Itisdone,andsubmitted.Youcanplay\u201cSurvivaloftheTastiest\u201don[it],[based]onthe[way].Playingonthewebworks,but[I]havetosimulatemulti-touchfortablemovingandthat[would]beabitconfusing.\n\nThere\u2019salotI\u2019dliketotalkabout.I\u2019llgothroughevery[day],insted",
+      "after": "<s>Itisdone[ ]andsubmitted.Youcanplay\u201cSurvivaloftheTastiest\u201don[ ],[ ]onthe[ ].Play[ ]onthewebworks,but[ ]havetosimulatemulti-touchfortablemovingandthat[ ]beabitconfusing.\n\nThere\u2019[ ]alotI\u2019dliketotalkabout.I\u2019llgothroughevery[ ],insted",
+      "masked_positions": 9,
+      "correct_before": 3,
+      "correct_after": 0
+    },
+    {
+      "original": "sauceateach_other_until_one_dies_._Yougetcreditsforotherpastasyourownpast_a_kill.\n\nOnce_a__past__a_isinthevicinityofaplate_,_it_starts_conqueringitforitsteam.Ittakes_around____1_0seconds_for__a_platetobeconquered_;_lessif_more_pastafromthesameteamarearound.Ifpastafrom_other_team",
+      "before": "sauceateachotheruntil[I]dies.Yougetcreditsforotherpastasyourownpast[to]kill.\n\nOnce[the][the][it]isinthevicinityofaplate,it[is]conqueringitforitsteam.Ittakes[]10seconds[in][the]platetobeconquered[and]lessif[the]pastafromthesameteamarearound.Ifpastafrom[the]team",
+      "after": "sauceateach[ ]until[ ]dies[ ]Yougetcreditsforotherpastasyourownpast[ ]kill.\n\nOnce[ ][ ][ ]isinthevicinityofaplate[ ]it[ ]conqueringitforitsteam.Ittakes[ ][ ][ ]0seconds[ ][ ]platetobeconquered[ ]lessif[ ]pastafromthesameteamarearound.Ifpastafrom[ ]team",
+      "masked_positions": 17,
+      "correct_before": 5,
+      "correct_after": 0
+    },
+    {
+      "original": "fast.Butnotfastenough_._\n\nEventhoughIworkedaround32+hoursforthisLud_um_Dare,thebiggestproblemIhadtoface_in_theendwasoverscoping._I_hadtoo_much_planned_,_andcouldn_\u2019_tgetit_all_done.\n\nContent_-_wise,Ihad_several_kindsofpasta_planned_(Wikipediaisjustamazingin",
+      "before": "fast.Butnotfastenough.\n\nEventhoughIworkedaround32+hoursforthisLud[,]Dare,thebiggestproblemIhadtoface[at]theendwasoverscoping.Ihadtoomuchplanned,andcouldn\u2019tgetit[as]done.\n\nContent-wise,Ihad[all]kindsofpasta[.](Wikipediaisjustamazingin",
+      "after": "fast.Butnotfastenough[ ]\n\nEventhoughIworkedaround32+hoursforthisLud[ ]Dare,thebiggestproblemIhadtoface[ ]theendwasoverscoping.[ ]hadtoo[ ]planned[ ]andcouldn[ ]tgetit[ ]done.\n\nContent[ ]wise,Ihad[ ]kindsofpasta[ ](Wikipediaisjustamazingin",
+      "masked_positions": 11,
+      "correct_before": 6,
+      "correct_after": 0
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[like]amin[ing]senthimpracticallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[out]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[ ]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[ ]look[ ]amin[ ]senthim[ ]icallycatatonic.<s>[ ]hadbeenmegan'splanwhenshegothim[ ]earlier.<s>he'dseenthemovie[ ]bymistake,consideringhewasalittleyoungforthepgcartoon,but[ ]oldercous",
+      "masked_positions": 9,
+      "correct_before": 2,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[she]made[her]tothekitchen,meganpausedtocatchherbreath.<s>sheonlyhadasecondbefore[the][was]breezedinwithsean,andheryoung[,]brother,gavin.<s>feelinglike[a]was[and]againa[little][w]ager,shefiled[with]herparentsastheyheadedintothegarage.<s>``iwantto[go],",
+      "after": ".''<s>when[ ]made[ ]to[ ]kitchen,meganpausedtocatchherbreath.<s>[ ]onlyhadasecondbefore[ ][ ][ ]reezedinwithsean,and[ ]young[ ]brother,gavin.<s>feelinglike[ ][ ][ ]againa[ ][ ]ager,shefiled[ ]herparents[ ]theyheadedintothegarage.<s>``iwantto[ ],",
+      "masked_positions": 17,
+      "correct_before": 6,
+      "correct_after": 0
+    }
+  ]
+}

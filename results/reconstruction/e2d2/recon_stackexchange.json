@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "stackexchange",
+  "unlearn_steps": 10000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.9118179678916931,
+      "top5_accuracy": 0.9339927592448927
+    },
+    "stackexchange": {
+      "accuracy": 0.8992758989334106,
+      "top5_accuracy": 0.9202223946211533
+    },
+    "ccnewsv2": {
+      "accuracy": 0.8987587094306946,
+      "top5_accuracy": 0.9172485130592191
+    },
+    "gutenberg": {
+      "accuracy": 0.9071632027626038,
+      "top5_accuracy": 0.9264934057408845
+    },
+    "hackernews": {
+      "accuracy": 0.9072924852371216,
+      "top5_accuracy": 0.9251357641582623
+    },
+    "openwebtext": {
+      "accuracy": 0.9015386700630188,
+      "top5_accuracy": 0.9206749418153607
+    },
+    "pilecc": {
+      "accuracy": 0.899017333984375,
+      "top5_accuracy": 0.9156969226790794
+    },
+    "wikipedia": {
+      "accuracy": 0.9006335735321045,
+      "top5_accuracy": 0.9169252650633566
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "stackexchange": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "ccnewsv2": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "gutenberg": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "hackernews": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "openwebtext": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "pilecc": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "wikipedia": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.9118179678916931,
+      "top5_accuracy": -0.9339927592448927
+    },
+    "stackexchange": {
+      "accuracy": -0.8992758989334106,
+      "top5_accuracy": -0.9202223946211533
+    },
+    "ccnewsv2": {
+      "accuracy": -0.8987587094306946,
+      "top5_accuracy": -0.9172485130592191
+    },
+    "gutenberg": {
+      "accuracy": -0.9071632027626038,
+      "top5_accuracy": -0.9264934057408845
+    },
+    "hackernews": {
+      "accuracy": -0.9072924852371216,
+      "top5_accuracy": -0.9251357641582623
+    },
+    "openwebtext": {
+      "accuracy": -0.9015386700630188,
+      "top5_accuracy": -0.9206749418153607
+    },
+    "pilecc": {
+      "accuracy": -0.899017333984375,
+      "top5_accuracy": -0.9156969226790794
+    },
+    "wikipedia": {
+      "accuracy": -0.9006335735321045,
+      "top5_accuracy": -0.9169252650633566
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>Q:\n_\n_WhywasMundungusbannedfromtheHog'sHead?\n\n_In_Order_of_thePhoenix_while_thetri_o_wereintheHogsHead_for_thefirsttimeplottingthestartofDumbledore_'_sArmy,ittranspiresthatol_'_Dungwaslurkinginthepubinadisguise,having_been_banned",
+      "before": "<s>Q:\n\nWhywasMundungusbannedfromtheHog'sHead?\n\n[The]OrderofthePhoenix[of]thetri[s]wereintheHogsHead[,]thefirsttimeplottingthestartofDumbledore'sArmy,ittranspiresthatol[.]Dungwaslurkinginthepubinadisguise,having[a]banned",
+      "after": "<s>Q:\n[numpy]WhywasMundungusbannedfromtheHog'sHead?\n\n[numpy]Order[numpy]thePhoenix[numpy]thetri[numpy]wereintheHogsHead[numpy]thefirsttimeplottingthestartofDumbledore[numpy]sArmy,ittranspiresthatol[numpy]Dungwaslurkinginthepubinadisguise,having[numpy]banned",
+      "masked_positions": 9,
+      "correct_before": 3,
+      "correct_after": 0
+    },
+    {
+      "original": "allmyshellscript_ing_in_python_._\n_It'seasiertoread,morepowerfulandworks_on_windowsaswell.\n_\n__A__:_\n\nYoucouldjusttakethebase_name_as_an_argumentanduse$1.Rnw_,__$__1_.tex_,__and_$1.pdf._Python_isgreat_for_shellscripts,butIusuallystickwithbashforthingslessthan__1",
+      "before": "allmyshellscript[is]in[it].\nIt'seasiertoread,morepowerfulandworks[a]windowsaswell.\n\n[~~]:\n\nYoucouldjusttakethebase[,]as[a]argumentanduse$1.Rnw[.][\n][it].tex[\n][of]$1.pdf.[It]isgreat[a]shellscripts,butIusuallystickwithbashforthingslessthan[$]1",
+      "after": "allmyshellscript[numpy]in[numpy].[numpy]It'seasiertoread,morepowerfulandworks[numpy]windowsaswell.\n[numpy][numpy][numpy]\n\nYoucouldjusttakethebase[numpy]as[numpy]argumentanduse$1.Rnw[numpy][numpy][numpy].tex[numpy][numpy]$1.pdf.[numpy]isgreat[numpy]shellscripts,butIusuallystickwithbashforthingslessthan[numpy]1",
+      "masked_positions": 17,
+      "correct_before": 3,
+      "correct_after": 0
+    },
+    {
+      "original": "\"\"):\n  ifstring_==_\"\":\n      print\"winner:\",output\n      returnoutput\n_  _output=output+string[-1]\n  _string_=string[:-1]\n  _return_reverse(_string_,_output_=output_)_\n\n<s>_Q_:\n\nTextViewNot_centered_inappbutcentered_in_match_constraint\n_\n_I'vecreatedasimpleactivitydesign",
+      "before": "\"\"):\n  ifstring[:]\"\":\n      print\"winner:\",output\n      returnoutput\n[      ]output=output+string[-1]\n  [return]=string[:-1]\n  returnreverse([1],[id]=output)\n\n<s>Q:\n\nTextViewNot[it]inappbutcentered[to]match_constraint\n\nI'vecreatedasimpleactivitydesign",
+      "after": "\"\"):\n  ifstring[numpy]\"\":\n      print\"winner:\",output\n      returnoutput\n[numpy]output=output+string[-1]\n  [numpy]=string[:-1]\n  [numpy]reverse([numpy],[numpy]=output[numpy]\n\n<s>[numpy]:\n\nTextViewNot[numpy]inappbutcentered[numpy]match_constraint\n[numpy]I'vecreatedasimpleactivitydesign",
+      "masked_positions": 11,
+      "correct_before": 4,
+      "correct_after": 0
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[in]amin[ing]senthim[sh]icallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[to]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[numpy]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[numpy]look[numpy]amin[numpy]senthim[numpy]icallycatatonic.<s>[numpy]hadbeenmegan'splanwhenshegothim[numpy]earlier.<s>he'dseenthemovie[numpy]bymistake,consideringhewasalittleyoungforthepgcartoon,but[numpy]oldercous",
+      "masked_positions": 9,
+      "correct_before": 1,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[he]made[him]tothekitchen,meganpausedtocatchherbreath.<s>[the]onlyhadasecondbefore[,][,][-]reezedinwithsean,and[a]young[her]brother,gavin.<s>feelinglike[a][,][ed]againa[few][of]ager,shefiled[in]herparents[,]theyheadedintothegarage.<s>``iwantto[be],",
+      "after": ".''<s>when[numpy]made[numpy]to[numpy]kitchen,meganpausedtocatchherbreath.<s>[numpy]onlyhadasecondbefore[numpy][numpy][numpy]reezedinwithsean,and[numpy]young[numpy]brother,gavin.<s>feelinglike[numpy][numpy][numpy]againa[numpy][numpy]ager,shefiled[numpy]herparents[numpy]theyheadedintothegarage.<s>``iwantto[numpy],",
+      "masked_positions": 17,
+      "correct_before": 1,
+      "correct_after": 0
+    }
+  ]
+}

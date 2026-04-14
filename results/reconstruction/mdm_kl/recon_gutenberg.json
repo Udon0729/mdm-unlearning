@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "gutenberg",
+  "unlearn_steps": 10000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.5015515685081482,
+      "top5_accuracy": 0.6836048616498578
+    },
+    "stackexchange": {
+      "accuracy": 0.35893458127975464,
+      "top5_accuracy": 0.5146754590121542
+    },
+    "ccnewsv2": {
+      "accuracy": 0.3309412896633148,
+      "top5_accuracy": 0.48616498577708817
+    },
+    "gutenberg": {
+      "accuracy": 0.4184122085571289,
+      "top5_accuracy": 0.6024696146883889
+    },
+    "hackernews": {
+      "accuracy": 0.4141453206539154,
+      "top5_accuracy": 0.5647142487716577
+    },
+    "openwebtext": {
+      "accuracy": 0.3604861795902252,
+      "top5_accuracy": 0.5272821308507887
+    },
+    "pilecc": {
+      "accuracy": 0.33288079500198364,
+      "top5_accuracy": 0.49754331523144557
+    },
+    "wikipedia": {
+      "accuracy": 0.35802948474884033,
+      "top5_accuracy": 0.5035557279544867
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 0.034975431859493256,
+      "top5_accuracy": 0.03497543315231445
+    },
+    "stackexchange": {
+      "accuracy": 0.00012929919466841966,
+      "top5_accuracy": 0.0069821567106283944
+    },
+    "ccnewsv2": {
+      "accuracy": 0.0005818463978357613,
+      "top5_accuracy": 0.0014222911817946729
+    },
+    "gutenberg": {
+      "accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "hackernews": {
+      "accuracy": 6.464959733420983e-05,
+      "top5_accuracy": 0.0015515903801396431
+    },
+    "openwebtext": {
+      "accuracy": 0.0002585983893368393,
+      "top5_accuracy": 0.0003878975950349108
+    },
+    "pilecc": {
+      "accuracy": 6.464959733420983e-05,
+      "top5_accuracy": 0.000517196793379881
+    },
+    "wikipedia": {
+      "accuracy": 0.0005818463978357613,
+      "top5_accuracy": 0.0012283423842772176
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.46657613664865494,
+      "top5_accuracy": -0.6486294284975433
+    },
+    "stackexchange": {
+      "accuracy": -0.3588052820850862,
+      "top5_accuracy": -0.5076933023015258
+    },
+    "ccnewsv2": {
+      "accuracy": -0.33035944326547906,
+      "top5_accuracy": -0.4847426945952935
+    },
+    "gutenberg": {
+      "accuracy": -0.4184122085571289,
+      "top5_accuracy": -0.6024696146883889
+    },
+    "hackernews": {
+      "accuracy": -0.4140806710565812,
+      "top5_accuracy": -0.563162658391518
+    },
+    "openwebtext": {
+      "accuracy": -0.3602275812008884,
+      "top5_accuracy": -0.5268942332557538
+    },
+    "pilecc": {
+      "accuracy": -0.33281614540464943,
+      "top5_accuracy": -0.4970261184380657
+    },
+    "wikipedia": {
+      "accuracy": -0.35744763835100457,
+      "top5_accuracy": -0.5023273855702094
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>\n\n_\n_\n\n\n\n\n\n\n\n\n\n\nTheOldTestamentoftheKing_James_Version_of_theBible_\n_\n\n_\n_\nTheFirstBookofMos_es_:CalledGenesis\n\n\n1:_1_InthebeginningGodcreatedtheheavenandthe_earth_.\n\n1:2Andtheearthwaswithoutform,andvoid;_and_darknesswasupon",
+      "before": "<s>\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheOldTestamentoftheKing[of]VersionoftheBible[.]\n\n\n\nTheFirstBookofMoses:CalledGenesis\n\n\n1:1InthebeginningGodcreatedtheheavenandthe[people].\n\n1:2Andtheearthwaswithoutform,andvoid;[the]darknesswasupon",
+      "after": "<s>\n\n[,]\n\n\n\n\n\n\n\n\n\n\nTheOldTestamentoftheKing[,]Version[,]theBible[,]\n\n[,]\nTheFirstBookofMos[,]:CalledGenesis\n\n\n1:[,]InthebeginningGodcreatedtheheavenandthe[,].\n\n1:2Andtheearthwaswithoutform,andvoid;[,]darknesswasupon",
+      "masked_positions": 9,
+      "correct_before": 5,
+      "correct_after": 0
+    },
+    {
+      "original": ":28And_God_bl_essed_them_,_andGodsaiduntothem,Befruitful,and_\n_multiply,andre_pl__en__ish_theearth,andsubdueit:_and_have_domin_ion\noverthefishofthesea,_and__over__the_fow_l__of_theair,andover_every_\nl_iving_thingthatmovethupontheearth.\n\n1:2_9_And",
+      "before": ":28And[they]bl[ame]them,andGodsaiduntothem,Befruitful,and\nmultiply,andre[-][them][in]theearth,andsubdueit:andhave[l]ion\noverthefishofthesea,and[the]thefow[,][in]theair,andover[the]\nl[ittle]thingthatmovethupontheearth.\n\n1:2[0]And",
+      "after": ":28And[,]bl[,]them[,]andGodsaiduntothem,Befruitful,and[,]multiply,andre[,][,][,]theearth,andsubdueit:[,]have[,]ion\noverthefishofthesea,[,][,][,]fow[,][,]theair,andover[,]\nl[,]thingthatmovethupontheearth.\n\n1:2[,]And",
+      "masked_positions": 17,
+      "correct_before": 5,
+      "correct_after": 0
+    },
+    {
+      "original": "\n2:21And_the_LORDGodcausedadeepsleeptofalluponAdam,andhe\ns_le_pt:andhetookoneofhisribs_,_andclosedupthefleshinstead\nthere_of_;_2_:_2_2And_the_rib,which_the_LORDGodhadtaken_from_man,made\n_he_awoman,and_brought_heruntotheman.\n\n2",
+      "before": "\n2:21AndtheLORDGodcausedadeepsleeptofalluponAdam,andhe\ns[swe]pt:andhetookoneofhisribs,andclosedupthefleshinstead\nthere[said];[1]:[1]2Andtherib,whichtheLORDGodhadtaken[a]man,made\n[of]awoman,and[put]heruntotheman.\n\n2",
+      "after": "\n2:21And[,]LORDGodcausedadeepsleeptofalluponAdam,andhe\ns[,]pt:andhetookoneofhisribs[,]andclosedupthefleshinstead\nthere[,];[,]:[,]2And[,]rib,which[,]LORDGodhadtaken[,]man,made\n[,]awoman,and[,]heruntotheman.\n\n2",
+      "masked_positions": 11,
+      "correct_before": 4,
+      "correct_after": 0
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[like]amin[ing]senthimpracticallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[out]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[,]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[,]look[,]amin[,]senthim[,]icallycatatonic.<s>[,]hadbeenmegan'splanwhenshegothim[,]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[,]oldercous",
+      "masked_positions": 9,
+      "correct_before": 2,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[she]made[her]tothekitchen,meganpausedtocatchherbreath.<s>sheonlyhadasecondbefore[the][was]breezedinwithsean,andheryoung[,]brother,gavin.<s>feelinglike[a]was[and]againa[little][w]ager,shefiled[with]herparentsastheyheadedintothegarage.<s>``iwantto[go],",
+      "after": ".''<s>when[,]made[,]to[,]kitchen,meganpausedtocatchherbreath.<s>[,]onlyhadasecondbefore[,][,][,]reezedinwithsean,and[,]young[,]brother,gavin.<s>feelinglike[,][,][,]againa[,][,]ager,shefiled[,]herparents[,]theyheadedintothegarage.<s>``iwantto[,],",
+      "masked_positions": 17,
+      "correct_before": 6,
+      "correct_after": 0
+    }
+  ]
+}

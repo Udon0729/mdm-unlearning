@@ -1,0 +1,151 @@
+{
+  "unlearn_corpus": "openwebtext",
+  "unlearn_steps": 2000,
+  "mask_ratio": 0.15,
+  "base_results": {
+    "bookcorpus": {
+      "accuracy": 0.5015515685081482,
+      "top5_accuracy": 0.6836048616498578
+    },
+    "stackexchange": {
+      "accuracy": 0.35893458127975464,
+      "top5_accuracy": 0.5146754590121542
+    },
+    "ccnewsv2": {
+      "accuracy": 0.3309412896633148,
+      "top5_accuracy": 0.48616498577708817
+    },
+    "gutenberg": {
+      "accuracy": 0.4184122085571289,
+      "top5_accuracy": 0.6024696146883889
+    },
+    "hackernews": {
+      "accuracy": 0.4141453206539154,
+      "top5_accuracy": 0.5647142487716577
+    },
+    "openwebtext": {
+      "accuracy": 0.3604861795902252,
+      "top5_accuracy": 0.5272821308507887
+    },
+    "pilecc": {
+      "accuracy": 0.33288079500198364,
+      "top5_accuracy": 0.49754331523144557
+    },
+    "wikipedia": {
+      "accuracy": 0.35802948474884033,
+      "top5_accuracy": 0.5035557279544867
+    }
+  },
+  "unlearned_results": {
+    "bookcorpus": {
+      "accuracy": 6.464959733420983e-05,
+      "top5_accuracy": 0.00012929919834497026
+    },
+    "stackexchange": {
+      "accuracy": 0.016291698440909386,
+      "top5_accuracy": 0.05980087923454874
+    },
+    "ccnewsv2": {
+      "accuracy": 0.01461080927401781,
+      "top5_accuracy": 0.029027670028445824
+    },
+    "gutenberg": {
+      "accuracy": 0.0029738815501332283,
+      "top5_accuracy": 0.0738944918541505
+    },
+    "hackernews": {
+      "accuracy": 0.004784070421010256,
+      "top5_accuracy": 0.023532454098784586
+    },
+    "openwebtext": {
+      "accuracy": 0.011636927723884583,
+      "top5_accuracy": 0.03665632273079907
+    },
+    "pilecc": {
+      "accuracy": 0.010343936271965504,
+      "top5_accuracy": 0.03271269718127748
+    },
+    "wikipedia": {
+      "accuracy": 0.02198086306452751,
+      "top5_accuracy": 0.0665244375484872
+    }
+  },
+  "delta": {
+    "bookcorpus": {
+      "accuracy": -0.501486918910814,
+      "top5_accuracy": -0.6834755624515129
+    },
+    "stackexchange": {
+      "accuracy": -0.34264288283884525,
+      "top5_accuracy": -0.4548745797776054
+    },
+    "ccnewsv2": {
+      "accuracy": -0.316330480389297,
+      "top5_accuracy": -0.45713731574864236
+    },
+    "gutenberg": {
+      "accuracy": -0.4154383270069957,
+      "top5_accuracy": -0.5285751228342384
+    },
+    "hackernews": {
+      "accuracy": -0.40936125023290515,
+      "top5_accuracy": -0.5411817946728731
+    },
+    "openwebtext": {
+      "accuracy": -0.34884925186634064,
+      "top5_accuracy": -0.4906258081199896
+    },
+    "pilecc": {
+      "accuracy": -0.32253685873001814,
+      "top5_accuracy": -0.4648306180501681
+    },
+    "wikipedia": {
+      "accuracy": -0.3360486216843128,
+      "top5_accuracy": -0.4370312904059995
+    }
+  },
+  "examples_unlearned": [
+    {
+      "original": "<s>Port-au_-_Prince,Haiti(CNN)--Earthquakevictims,_wr_ith_ing_inpain_and_grasping_at_life,watcheddoctorsand_n_urseswalkawayfromafieldhospitalFridaynightafter_a_Belgianmedicalteamevacuatedthearea_,_sayingitwasconcernedaboutsecurity.\n\nThedecisionleftCNNChiefMedicalCor_respond_entSanj",
+      "before": "<s>Port-au[\n]Prince,Haiti(CNN)--Earthquakevictims,[p]ith[s]inpainandgrasping[his]life,watcheddoctorsandnurseswalkawayfromafieldhospitalFridaynightafter[the]Belgianmedicalteamevacuatedthearea,sayingitwasconcernedaboutsecurity.\n\nThedecisionleftCNNChiefMedicalCor[b]entSanj",
+      "after": "<s>Port-au[]Prince,Haiti(CNN)--Earthquakevictims,[]ith[]inpain[]grasping[]life,watcheddoctorsand[]urseswalkawayfromafieldhospitalFridaynightafter[]Belgianmedicalteamevacuatedthearea[]sayingitwasconcernedaboutsecurity.\n\nThedecisionleftCNNChiefMedicalCor[]entSanj",
+      "masked_positions": 9,
+      "correct_before": 3,
+      "correct_after": 0
+    },
+    {
+      "original": "nursesare_gone_,\"_she_said_._\"Theyareexpectedtobebacktomorrow.They_had_noplanonleavington_ight__.__It_wasanorderthatcamesuddenly.\"\n_\n_She_told_Gupta,\"It'sjustyou_.\"__\n__\n_A_7__._0magnitudeearthquake_fl_attened_H_aiti'scapitalcityTuesdayafternoon,affecting_as_many",
+      "before": "nursesare[there],\"[he]said.\"Theyareexpectedtobebacktomorrow.They[have]noplanonleavingtonight.[it]wasanorderthatcamesuddenly.\"\n\nShetoldGupta,\"It'sjustyou.\"\n\nA[1][0]0magnitudeearthquake[f]attenedHaiti'scapitalcityTuesdayafternoon,affecting[so]many",
+      "after": "nursesare[],\"[]said[]\"Theyareexpectedtobebacktomorrow.They[]noplanonleavington[][][]wasanorderthatcamesuddenly.\"\n[]She[]Gupta,\"It'sjustyou[][][]A[][]0magnitudeearthquake[]attened[]aiti'scapitalcityTuesdayafternoon,affecting[]many",
+      "masked_positions": 17,
+      "correct_before": 9,
+      "correct_after": 0
+    },
+    {
+      "original": "continueaprimaryfightthathe_said_heisconfidenthecanstillwin.HedidnotmentionMissouriortheother_cont_estsbyname.\n\n\"Withmorethan_half_thedelegatesyettobechosenand_a_calendarthat_fav_ors_us_inthe_weeks_andmonthsto_come_,weremainconfidentthat_our_campaignisona_path_towinthenom_ination_,\"Sanderssaid.\n\nBut",
+      "before": "continueaprimaryfightthathesaidheisconfidenthecanstillwin.HedidnotmentionMissouriortheother[for]estsbyname.\n\n\"Withmorethan[all]thedelegatesyettobechosenand[the]calendarthat[invest]ors[are]inthe[last]andmonthsto[me],weremainconfidentthat[the]campaignisona[way]towinthenomination,\"Sanderssaid.\n\nBut",
+      "after": "continueaprimaryfightthathe[]heisconfidenthecanstillwin.HedidnotmentionMissouriortheother[]estsbyname.\n\n\"Withmorethan[]thedelegatesyettobechosenand[]calendarthat[]ors[]inthe[]andmonthsto[],weremainconfidentthat[]campaignisona[]towinthenom[],\"Sanderssaid.\n\nBut",
+      "masked_positions": 11,
+      "correct_before": 2,
+      "correct_after": 0
+    }
+  ],
+  "examples_retained": [
+    {
+      "original": "<s>usually,he_would_betearingaroundthelivingroom,playingwithhistoys.<s>butjust_one_look_at_amin_ion_senthim_pract_icallycatatonic.<s>_that_hadbeenmegan'splanwhenshegothim_dressed_earlier.<s>he'dseenthemovie_almost_bymistake,consideringhewasalittleyoungforthepgcartoon,but_with_oldercous",
+      "before": "<s>usually,hewouldbetearingaroundthelivingroom,playingwithhistoys.<s>butjust[a]look[like]amin[ing]senthimpracticallycatatonic.<s>[he]hadbeenmegan'splanwhenshegothim[out]earlier.<s>he'dseenthemovie[,]bymistake,consideringhewasalittleyoungforthepgcartoon,but[the]oldercous",
+      "after": "<s>usually,he[]betearingaroundthelivingroom,playingwithhistoys.<s>butjust[]look[]amin[]senthim[]icallycatatonic.<s>[]hadbeenmegan'splanwhenshegothim[]earlier.<s>he'dseenthemovie[]bymistake,consideringhewasalittleyoungforthepgcartoon,but[]oldercous",
+      "masked_positions": 9,
+      "correct_before": 2,
+      "correct_after": 0
+    },
+    {
+      "original": ".''<s>when_they_made_it_to_the_kitchen,meganpausedtocatchherbreath.<s>_she_onlyhadasecondbefore_her__mother__b_reezedinwithsean,and_her_young_est_brother,gavin.<s>feelinglike_she__was__once_againa_te__en_ager,shefiled_behind_herparents_as_theyheadedintothegarage.<s>``iwantto_drive_,",
+      "before": ".''<s>when[she]made[her]tothekitchen,meganpausedtocatchherbreath.<s>sheonlyhadasecondbefore[the][was]breezedinwithsean,andheryoung[,]brother,gavin.<s>feelinglike[a]was[and]againa[little][w]ager,shefiled[with]herparentsastheyheadedintothegarage.<s>``iwantto[go],",
+      "after": ".''<s>when[]made[]to[]kitchen,meganpausedtocatchherbreath.<s>[]onlyhadasecondbefore[][][]reezedinwithsean,and[]young[]brother,gavin.<s>feelinglike[][][]againa[][]ager,shefiled[]herparents[]theyheadedintothegarage.<s>``iwantto[],",
+      "masked_positions": 17,
+      "correct_before": 6,
+      "correct_after": 0
+    }
+  ]
+}
