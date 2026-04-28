@@ -195,5 +195,5 @@ This project is released under the [MIT License](LICENSE). It builds on a number
 
 ## Contact
 
-Author: **Kazuki Munaoka** (Shizuoka University) — `munaoka.kazuki.22@shizuoka.ac.jp`
+Author: **Kota Munaoka** (Shizuoka University) — `kmunaoka@gmail.com`
 Issues: <https://github.com/Udon0729/mdm-unlearning/issues>
